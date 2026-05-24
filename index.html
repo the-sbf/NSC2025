@@ -115,75 +115,12 @@ body{font-family:'Source Serif 4',Georgia,serif;background:var(--frost);color:va
   .sp-body{max-height:none}
 }
 @media(max-width:600px){
-  body{line-height:1.55}
-  .hero{padding:1.6rem 1rem 1.3rem}
-  .hero-ey{font-size:.58rem;letter-spacing:.22em;margin-bottom:.4rem}
-  .hero-sub{font-size:.8rem;padding:0 .4rem}
-  .hero-rule{margin-top:.7rem;width:40px;height:2px}
-  .hero-meta{gap:.7rem;font-size:.65rem;margin-top:.6rem}
+  .sp-body{font-size:.82rem;padding:.8rem}
 
-  .top-bar{padding:.5rem .7rem;gap:.55rem}
-  .tb-section{font-size:.62rem;letter-spacing:.08em}
-  .tb-score{font-size:.68rem}
-
-  .sp-header{padding:.5rem .75rem}
-  .sp-label{font-size:.6rem;letter-spacing:.18em}
-  .sp-type{font-size:.55rem}
-  .sp-body{font-size:.82rem;padding:.8rem .9rem;line-height:1.6;border-left-width:3px}
-  .sp-attr{padding:.45rem .9rem;font-size:.66rem}
-  .sp-toggle{display:block;padding:.55rem .9rem;font-size:.75rem;min-height:44px}
-
-  .q-panel{padding:.85rem .8rem;min-height:auto}
-  .qp-meta{gap:.45rem;margin-bottom:.6rem}
-  .qp-num{font-size:.66rem}
-  .cc{font-size:.56rem;padding:.13rem .45rem}
-  .qp-marks{font-size:.64rem}
-  .qp-text{font-size:.95rem;line-height:1.45;margin-bottom:.7rem}
-  .qp-hint{font-size:.76rem;padding:.45rem .6rem;margin-bottom:.7rem}
-
-  .ol{gap:.4rem}
-  .ob{font-size:.82rem;padding:.7rem .75rem;gap:.55rem;line-height:1.45;min-height:48px;border-width:2px}
-  .ol2{font-size:.88rem;min-width:1rem}
-  .om{font-size:.95rem}
-
-  .fb{padding:.75rem .85rem;font-size:.8rem;line-height:1.55;margin-top:.7rem}
-  .fbl{font-size:.6rem;letter-spacing:.15em}
-
-  .nav-row{margin-top:.8rem;padding-top:.7rem;gap:.4rem}
-  .bs{padding:.7rem 1rem;font-size:.78rem;min-height:44px;flex:1}
-  .b2{padding:.7rem .85rem;font-size:.78rem;min-height:44px}
-
-  .si{padding:1.1rem .9rem}
-  .si h2{font-size:1.05rem}
-  .si p{font-size:.82rem;line-height:1.6}
-
-  .mta-box{padding:.9rem 1rem;font-size:.82rem;line-height:1.65;border-left-width:3px}
-  .mta-label{font-size:.62rem;letter-spacing:.15em}
-  .rr{padding:.5rem 0;gap:.5rem}
-  .rl{font-size:.78rem;min-width:0;flex:1 1 100%}
-  .rbs{gap:.3rem;width:100%}
-  .rb{padding:.4rem .7rem;font-size:.7rem;flex:1;min-height:38px}
-
-  .rc{padding:1.4rem 1rem;margin:1rem .6rem}
-  .rs-num{font-size:2.6rem}
-
-  .modal{width:95%;max-height:90vh;border-radius:5px}
-  .modal-hd{padding:.75rem 1rem}
-  .modal-title{font-size:.65rem;letter-spacing:.2em}
-  .modal-body{padding:1rem 1.05rem}
-  .modal-body h3{font-size:.98rem}
-  .modal-body p{font-size:.8rem;line-height:1.6}
-  .modal-body .skill-step{padding:.55rem .7rem;gap:.55rem}
-  .skill-step-text{font-size:.78rem;line-height:1.5}
-  .skill-step-num{font-size:1rem;min-width:1.2rem}
-  .modal-body .skill-example,.modal-body .skill-warn{font-size:.76rem;padding:.45rem .6rem}
-  .hint-btn{padding:.75rem .9rem;font-size:.82rem;min-height:46px}
-}
-@media(max-width:380px){
-  .hero h1{font-size:1.45rem}
-  .qp-text{font-size:.9rem}
-  .ob{font-size:.78rem}
-  .nav-row{flex-wrap:wrap}
+  .q-panel{padding:.8rem;min-height:auto}
+  .qp-text{font-size:.95rem}
+  .ob{font-size:.82rem;padding:.65rem .75rem}
+  .sp-toggle{display:block}
 }
 
 /* SKILLS POPUP */
@@ -209,10 +146,39 @@ body{font-family:'Source Serif 4',Georgia,serif;background:var(--frost);color:va
 .hint-btn svg{width:18px;height:18px;flex-shrink:0}
 .hint-btn .hint-pulse{display:inline-block;width:8px;height:8px;background:#D4A745;border-radius:50%;margin-left:.3rem;animation:pulse 1.5s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+
+/* TIMER */
+.timer-wrap{display:flex;align-items:center;gap:.4rem;margin-left:.5rem;white-space:nowrap}
+.timer-display{font-size:.78rem;font-weight:700;font-variant-numeric:tabular-nums;min-width:3.5rem;text-align:center;padding:.15rem .4rem;border-radius:3px;transition:all .3s}
+.timer-ok{color:var(--ok);background:#D5F5E3}
+.timer-warn{color:#856404;background:#FFF3CD}
+.timer-over{color:var(--bad);background:#FADBD8}
+.timer-label{font-size:.6rem;color:var(--txt2);text-transform:uppercase;letter-spacing:.1em}
+.timer-total{font-size:.7rem;color:var(--txt2);font-variant-numeric:tabular-nums}
+.time-note{background:var(--white);border:1px solid var(--bdr);border-radius:4px;padding:1rem 1.2rem;margin:1rem 0;font-size:.85rem;line-height:1.7;color:var(--txt2);border-left:4px solid var(--gold)}
+.time-note strong{color:var(--txt)}
+
+.start-overlay{position:fixed;inset:0;background:rgba(28,39,51,.85);z-index:600;display:flex;align-items:center;justify-content:center;animation:fi .3s ease}
+.start-modal{background:var(--white);border-radius:8px;max-width:480px;width:92%;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.3);animation:fi .4s ease}
+.sm-hd{background:linear-gradient(135deg,var(--slate),var(--steel));padding:1.2rem 1.5rem;text-align:center}
+.sm-hd h2{font-family:'Playfair Display',serif;color:var(--white);font-size:1.3rem;margin-bottom:.3rem}
+.sm-hd p{color:rgba(255,255,255,.6);font-size:.82rem;font-style:italic}
+.sm-bd{padding:1.4rem 1.5rem}
+.sm-bd p{font-size:.88rem;line-height:1.7;color:var(--txt);margin-bottom:.8rem}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1rem 0}
+.tc{padding:.7rem;background:var(--frost);border-radius:4px;text-align:center}
+.tc .tv{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--slate)}
+.tc .tl{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--txt2);font-weight:600}
+.sn{font-size:.82rem;color:var(--txt2);font-style:italic;padding:.6rem .8rem;background:#FEF9E7;border-left:3px solid var(--gold);margin:1rem 0;line-height:1.6}
+.sbw{text-align:center;padding:.5rem 0 .3rem}
+.sbt{padding:.8rem 2.5rem;background:var(--red);color:#fff;border:none;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;cursor:pointer;border-radius:4px;letter-spacing:.05em;transition:all .2s;box-shadow:0 4px 12px rgba(196,30,58,.3)}
+.sbt:hover{background:var(--red-dk);transform:translateY(-1px);box-shadow:0 6px 16px rgba(196,30,58,.4)}
+
 </style>
 </head>
 <body>
 
+<div class="start-overlay" id="start-overlay"><div class="start-modal"><div class="sm-hd"><h2>Cold War Origins</h2><p>Interactive Source Examination &middot; 50 Marks</p></div><div class="sm-bd"><p>You're about to work through the <strong>full Question 1</strong> from the May/June 2025 History P1 paper &mdash; transformed into an interactive experience with sources, scaffolded questions, and detailed feedback.</p><div class="tg"><div class="tc"><div class="tv">30 min</div><div class="tl">Recommended</div></div><div class="tc"><div class="tv">60 min</div><div class="tl">Actual exam</div></div><div class="tc"><div class="tv">20</div><div class="tl">Questions</div></div><div class="tc"><div class="tv">50</div><div class="tl">Total marks</div></div></div><div class="sn"><strong>Why 30 minutes instead of 60?</strong> In the exam, you write full answers by hand. Here, you select answers, so writing time is removed. Each question has a timer: <span style="color:#27AE60;font-weight:700">green</span> = on track, <span style="color:#856404;font-weight:700">amber</span> = running low, <span style="color:#E74C3C;font-weight:700">red</span> = over time. It's a guide, not a penalty.</div><div style="padding:.8rem 1rem;background:linear-gradient(135deg,#1B4F72,#2E86C1);border-radius:6px;margin:1rem 0;color:#fff"><div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;font-weight:700;color:#D4A745;margin-bottom:.4rem">&#9733; Your built-in exam coach</div><p style="font-size:.88rem;line-height:1.6;margin:0;color:#fff">Every question has a blue <strong>skills guide button</strong> &mdash; tap it for step-by-step help on how to approach that question type. <strong>Use it on every question.</strong> Seriously &mdash; the best learners tap it every time, even on questions they feel confident about. It builds the exam method into your muscle memory.</p><p style="font-size:.84rem;line-height:1.6;margin:.6rem 0 0;color:rgba(255,255,255,.8)"><strong style="color:#D4A745">Try this:</strong> Do it once with the exam coach &mdash; tap every skills guide, read every piece of feedback, take your time. Then come back and do a dry run without the guides, under time pressure. That second attempt is where you prove to yourself you've got it.</p></div><p style="font-size:.82rem;color:#5D6D7E;margin-top:.6rem">Score 70% or higher to unlock the bonus <strong>Mark This Answer</strong> section for extra marks.</p><div class="sbw"><button class="sbt" onclick="beginExam()">Begin Examination &#9203;</button></div></div></div></div>
 <div class="hero">
 <div class="hero-ey">Kula Revise · NSC History P1 · Interactive Assessment</div>
 <h1>The Origins of the Cold War</h1>
@@ -224,7 +190,11 @@ body{font-family:'Source Serif 4',Georgia,serif;background:var(--frost);color:va
 <div class="top-bar">
 <span class="tb-section" id="tb-sec">Source 1A</span>
 <div class="tb-progress"><div class="tb-fill" id="tb-fill" style="width:0%"></div></div>
-<span class="tb-score"><strong id="tb-e">0</strong>/<strong id="tb-t">50</strong> marks · Q<strong id="tb-qn">1</strong>/<strong id="tb-qt">20</strong></span>
+<div class="timer-wrap">
+<div><div class="timer-display timer-ok" id="q-timer">0:45</div><div class="timer-label">this Q</div></div>
+<div><div class="timer-total" id="total-timer">00:00</div><div class="timer-label">total</div></div>
+</div>
+<span class="tb-score"><strong id="tb-e">0</strong>/<strong id="tb-t">50</strong> · Q<strong id="tb-qn">1</strong>/<strong id="tb-qt">20</strong></span>
 </div>
 
 <div id="app"></div>
@@ -265,29 +235,29 @@ attr:'Paragraph rubric: L1 (0–2) = little understanding; L2 (3–5) = some und
 // ALL QUESTIONS — flat array, each knows its source
 const QS=[
 // Source 1A — L1: 7 marks, L2: 6 marks, L3: 4 marks
-{id:'q1',src:'1A',num:'1.1.1',m:2,lv:1,ll:'Extraction',
+{id:'q1',src:'1A',num:'1.1.1',m:2,t:50,lv:1,ll:'Extraction',
 t:'What, according to the source, was Churchill concerned about regarding the Soviet Union\'s intentions?',
 opts:['The Soviet Union\'s determination to spread communist influence across all of Europe without clear limits','The unlimited and unknowable scope of Soviet expansive tendencies','The Soviet Union\'s stated intention to establish communist governments in Western Europe by 1950','The Soviet Union\'s plans to withdraw from the United Nations Security Council'],
 c:1,fb:'The source states "nobody knows what Soviet Russia… intend to do… or what are the limits, if any, to their expansive tendencies." Churchill\'s specific concern is about the <em>unknowable scope</em> of Soviet expansion. Every other option introduces ideas not found in this source. Extraction = find the answer IN the text.'},
 
-{id:'q2',src:'1A',num:'1.1.2',m:2,lv:2,ll:'Concept',
+{id:'q2',src:'1A',num:'1.1.2',m:2,t:70,lv:2,ll:'Concept',
 t:'Define the concept <em>Iron Curtain</em> in your own words.',
 h:'"In your own words" means you must show you understand the concept — not repeat Churchill\'s phrase.',
 opts:['A military fortification built by Stalin along the Soviet Union\'s western border after 1945','An imaginary dividing line separating communist-controlled Eastern Europe from capitalist Western Europe after the Soviet Union extended its sphere of influence','The Berlin Wall, constructed in 1961 to prevent East Germans from fleeing to the West','A diplomatic agreement between the USA and USSR dividing Europe into official zones of influence at the Yalta Conference'],
 c:1,fb:'The Iron Curtain was a <em>metaphor</em> — not a physical structure. It described the political and ideological division of Europe into a Soviet-controlled East and a capitalist West. The Berlin Wall (1961) was one later physical manifestation, but it came 15 years after this speech. "Define in your own words" = show conceptual understanding, not paraphrase.'},
 
-{id:'q3',src:'1A',num:'1.1.3',m:2,lv:1,ll:'Extraction',
+{id:'q3',src:'1A',num:'1.1.3',m:2,t:50,lv:1,ll:'Extraction',
 t:'Identify TWO famous cities in the source that lie under the Soviet sphere of influence.',
 multi:true,mx:2,
 opts:['Warsaw','Athens','Fulton','Prague','London'],
 c:[0,3],fb:'The source lists Warsaw, Berlin, Prague, Vienna, Budapest, Belgrade, Bucharest, Sofia. Athens is explicitly EXCLUDED ("Greece alone is free"). Fulton is in Missouri, USA. London is not mentioned. Always verify your answer is IN the source.'},
 
-{id:'q4',src:'1A',num:'1.1.4',m:2,lv:2,ll:'Interpretation',
+{id:'q4',src:'1A',num:'1.1.4',m:2,t:70,lv:2,ll:'Interpretation',
 t:'Comment on why Churchill was worried about the rise and domination of communist parties in the eastern states of Europe.',
 opts:['Because communist parties had won legitimate democratic majorities across Eastern Europe through popular support','Because these parties, though originally very small, had been artificially elevated to dominance far beyond their genuine support — suggesting Soviet manipulation — and were pursuing totalitarian control','Because Churchill believed that if communist parties gained power in Eastern Europe, they would eventually demand independence from Moscow and destabilise the region','Because the communist parties were building military alliances with Germany, threatening the post-war settlement'],
 c:1,fb:'The key phrase: "very small… raised to pre-eminence and power far beyond their numbers." Churchill\'s worry isn\'t that communism is popular — it\'s that it\'s been <em>imposed</em> artificially. Parties with tiny real support now dominate and seek "totalitarian control." Option A is wrong because the source says the opposite — these parties rose BEYOND their numbers, not through genuine elections.'},
 
-{id:'q5',src:'1A',num:'1.1.5',m:4,lv:3,ll:'Reliability',
+{id:'q5',src:'1A',num:'1.1.5',m:4,t:120,lv:3,ll:'Reliability',
 t:'Explain why a historian would consider this source reliable in understanding the threat posed by Soviet expansionism in Europe.',
 h:'4-mark reliability = TWO developed reasons (2×2). Consider: WHO, WHEN, PURPOSE, PERSPECTIVE.',
 opts:[
@@ -298,7 +268,7 @@ opts:[
 ],c:0,c:0,fb:'Reliability evaluation requires weighing strengths AND limitations. Strengths: (1) Churchill had direct experience negotiating with Stalin at Yalta and Potsdam; (2) the speech is contemporaneous — delivered during the events it describes. Limitations: Churchill had clear political motives (rallying US involvement) and this represents only a Western perspective. Britain was NOT neutral (option D). Being out of office (option C) doesn\'t invalidate his extensive prior experience. Never say a source is simply "reliable" — always weigh both sides.'},
 
 // Source 1B (Cartoon)
-{id:'q6',src:'1B',num:'1.2.1',m:4,lv:2,ll:'Interpretation',
+{id:'q6',src:'1B',num:'1.2.1',m:4,t:100,lv:2,ll:'Interpretation',
 t:'Comment on how Stalin has been portrayed in the cartoon.',
 h:'Focus on the cartoonist\'s VISUAL CHOICES — size, positioning, body language, the map legend. What argument is being made through these choices?',
 opts:[
@@ -308,7 +278,7 @@ opts:[
 'Stalin is portrayed as a strategic leader methodically organising Eastern Europe into a unified economic bloc — the map categories suggest orderly administration rather than aggressive expansion'
 ],c:0,fb:'Every visual choice in a cartoon is an argument. Stalin\'s oversized body = dominance. His arm reaching across the map = aggression and expansion. The colour-coded legend = systematic, planned control. Question marks over France, Finland, etc. = the threat is ongoing and unresolved. This is a BRITISH cartoon — it represents a Western anti-Soviet perspective. A Soviet cartoonist would likely have shown American imperialism as the real threat.'},
 
-{id:'q7a',src:'1B',num:'1.2.2(a)',m:2,lv:2,ll:'Analysis',
+{id:'q7a',src:'1B',num:'1.2.2(a)',m:2,t:70,lv:2,ll:'Analysis',
 t:'Using the source and your own knowledge, explain why communism had NOT expanded into Greece and Turkey.',
 opts:[
 'Greece and Turkey received military and economic assistance from the United States through the Truman Doctrine (1947), which was specifically designed to counter Soviet pressure and support anti-communist governments in these countries',
@@ -317,7 +287,7 @@ opts:[
 'Britain had maintained a military presence in Greece since 1944 and used its influence to suppress communist movements without American involvement'
 ],c:0,fb:'The cartoon shows Greece and Turkey outside the Soviet bloc — your own knowledge explains WHY. The Truman Doctrine (March 1947) was the first concrete US containment policy, providing military and economic aid specifically to Greece and Turkey. NATO didn\'t exist until 1949 (option C). Greece actually DID have a communist insurgency (option D is wrong). This is a "source + own knowledge" question — you must use both.'},
 
-{id:'q7b',src:'1B',num:'1.2.2(b)',m:2,lv:2,ll:'Analysis',
+{id:'q7b',src:'1B',num:'1.2.2(b)',m:2,t:70,lv:2,ll:'Analysis',
 t:'Using the source and your own knowledge, explain why communism had NOT expanded into France.',
 opts:[
 'Although France had a significant communist party, it remained in the Western camp because American economic aid through the Marshall Plan strengthened the French economy and the US used political influence to counter communist support — keeping France on the western side of the Iron Curtain',
@@ -327,18 +297,18 @@ opts:[
 ],c:0,fb:'France is a nuanced case — it actually had a STRONG communist party (Source 1D confirms "about a quarter of the vote"). So why didn\'t it fall? The Marshall Plan provided economic recovery (Source 1D: "winning hearts and minds"), and France sat on the western side of the Iron Curtain. Option B is factually wrong — France never banned the Communist Party. Geography alone (option D) doesn\'t explain political outcomes.'},
 
 // Source 1C
-{id:'q8',src:'1C',num:'1.3.1',m:1,lv:1,ll:'Extraction',
+{id:'q8',src:'1C',num:'1.3.1',m:1,t:30,lv:1,ll:'Extraction',
 t:'Who, according to the source, replaced Byrnes as US Secretary of State in 1947?',
 opts:['Dean Acheson','George Marshall','Harry Truman','George Kennan'],
 c:1,fb:'Direct extraction: "with Byrnes out and George Marshall in as the Secretary of State." Acheson was Deputy Secretary. Truman was President. Kennan was a diplomat. 1-mark questions require precision — find the exact answer.'},
 
-{id:'q9',src:'1C',num:'1.3.2',m:2,lv:1,ll:'Extraction',
+{id:'q9',src:'1C',num:'1.3.2',m:2,t:50,lv:1,ll:'Extraction',
 t:'Identify TWO reasons the anti-communist governments of Turkey and Greece put forward for USA\'s help.',
 multi:true,mx:2,
 opts:['They were under severe Soviet pressure','They could not guarantee their own survival','They wanted to join the European Recovery Programme','They needed assistance rebuilding infrastructure after wartime damage'],
 c:[0,1],fb:'Both from the source: (1) "under severe Soviet pressure" and (2) "could not guarantee their own survival." Options C and D are not stated in this source. Multi-select = find MULTIPLE distinct pieces of evidence.'},
 
-{id:'q10',src:'1C',num:'1.3.3',m:4,lv:2,ll:'Interpretation',
+{id:'q10',src:'1C',num:'1.3.3',m:4,t:100,lv:2,ll:'Interpretation',
 t:'Comment on why Acheson regarded the Congressional session on aid to Turkey and Greece as \'Armageddon\'.',
 h:'"Armageddon" = the final, apocalyptic battle. Why would Acheson use such extreme language about a meeting?',
 opts:[
@@ -348,14 +318,14 @@ opts:[
 'Because Britain had just announced it could no longer afford to support Greece and Turkey, leaving only the United States capable of acting — and Congress had not yet accepted this new global role'
 ],c:0,fb:'Acheson used "Armageddon" because the stakes were civilisational in his view. Marshall spoke first and FAILED — "legislators seemed unmoved." Then Acheson reframed: not a local problem but an existential crisis. If Greece falls → communism infects three continents → freedom destroyed. The language reveals the Cold War mentality — every regional conflict was seen through a global, apocalyptic lens.'},
 
-{id:'q11',src:'1C',num:'1.3.4',m:2,lv:1,ll:'Extraction',
+{id:'q11',src:'1C',num:'1.3.4',m:2,t:50,lv:1,ll:'Extraction',
 t:'Give TWO reasons Acheson advanced when he changed the terms of the debate.',
 multi:true,mx:2,
 opts:['The Soviets were directly pressuring Turkey and Greece','If Greece fell to communism, the infection would spread to Africa, Asia Minor, and Europe across three continents','The United States had a moral obligation to spread democracy worldwide','American military bases in Greece were vital for national security'],
 c:[0,1],fb:'Acheson\'s two key arguments: (1) direct Soviet pressure on Greece and Turkey, and (2) a domino/contagion effect across three continents. Options C and D are not stated in the source. Notice how Acheson escalates from regional to global — that\'s the rhetorical move that convinced Congress.'},
 
 // Compare
-{id:'q12',src:'compare',num:'1.4',m:4,lv:3,ll:'Comparison',
+{id:'q12',src:'compare',num:'1.4',m:4,t:120,lv:3,ll:'Comparison',
 t:'Comment on how the information in Source 1A supports the evidence in Source 1C regarding the spread of communism in Europe after the Second World War.',
 h:'You need TWO developed comparison points (2×2). Show how the sources CONNECT — not just what each one says separately.',
 opts:[
@@ -366,18 +336,18 @@ opts:[
 ],c:0,fb:'Source comparison = finding CONNECTIONS between sources. Point 1: Source 1A identifies the problem (Soviet control over Eastern Europe); Source 1C shows it getting worse (pressure on Greece and Turkey). The threat Churchill warned about in 1946 is confirmed as escalating in 1947. Point 2: Both use contagion language — Churchill\'s "expansive tendencies" and Acheson\'s "infection" — framing communism as something that spreads and grows. Together, they show an escalating crisis. The best comparison answers show sources BUILDING ON each other.'},
 
 // Source 1D
-{id:'q13',src:'1D',num:'1.5.1',m:2,lv:1,ll:'Extraction',
+{id:'q13',src:'1D',num:'1.5.1',m:2,t:50,lv:1,ll:'Extraction',
 t:'Name TWO East European countries that showed keen interest in the European Recovery Programme.',
 multi:true,mx:2,
 opts:['Czechoslovakia','France','Poland','Bulgaria'],
 c:[0,2],fb:'Source: "East European countries, like Czechoslovakia and Poland, expressed keen interest." France is Western European. Bulgaria is not mentioned. These countries\' interest matters historically — it shows Soviet control was not yet total.'},
 
-{id:'q14',src:'1D',num:'1.5.2',m:1,lv:1,ll:'Extraction',
+{id:'q14',src:'1D',num:'1.5.2',m:1,t:30,lv:1,ll:'Extraction',
 t:'Why did Stalin warn the Czechs and others against participating in the European Recovery Programme?',
 opts:['He believed the programme would weaken socialist economic systems','He saw the American offer as a challenge to his sphere of influence','The Czechs had not consulted him before expressing interest','The programme required participants to hold free elections'],
 c:1,fb:'Direct extraction: "Stalin saw the American offer as a challenge to his sphere of influence." This is about power and control — not economics, consultation, or elections.'},
 
-{id:'q15',src:'1D',num:'1.5.3',m:2,lv:2,ll:'Concept',
+{id:'q15',src:'1D',num:'1.5.3',m:2,t:70,lv:2,ll:'Concept',
 t:'Explain the concept <em>Stalinisation</em> in the context of the Cold War in Eastern Europe.',
 opts:[
 'The modernisation of Eastern European economies using Soviet industrial methods and technology',
@@ -386,7 +356,7 @@ opts:[
 'The voluntary adoption of Soviet-style government by Eastern European populations who admired Stalin\'s leadership'
 ],c:1,fb:'The source defines this directly: "All but communists were proscribed, those independent of Moscow were purged, agriculture and heavy industry were brought under state control, civil and political liberties systematically abolished." Stalinisation was FORCED imposition — not voluntary adoption (option D). "In the context of" = connect your definition to the specific historical situation.'},
 
-{id:'q16',src:'1D',num:'1.5.4',m:4,lv:2,ll:'Interpretation',
+{id:'q16',src:'1D',num:'1.5.4',m:4,t:100,lv:2,ll:'Interpretation',
 t:'Using the source and your own knowledge, comment on how the Czech coup and Berlin Crisis \'damaged the Soviet image in Europe\'.',
 h:'2×2: TWO developed points using both source evidence and own knowledge.',
 opts:[
@@ -397,7 +367,7 @@ opts:[
 ],c:0,fb:'Two impacts: (1) Czech coup = USSR will use force even against countries trying to engage with the West (Marshall Plan interest). (2) Berlin Crisis = Soviet willingness to blockade civilians. The source adds: damage "even in France" where communists were strong. Marshall Aid "winning hearts and minds" = positive contrast. The best answers combine source evidence (France, Marshall Aid) with own knowledge (specific events in Czechoslovakia and Berlin).'},
 
 // Paragraph builder
-{id:'q17',src:'para',num:'1.6a',m:2,lv:3,ll:'Synthesis',
+{id:'q17',src:'para',num:'1.6a',m:2,t:75,lv:3,ll:'Synthesis',
 t:'STEP 1 — TOPIC SENTENCE: Which opening best addresses the question?',
 opts:[
 'The spread of communism in Europe after 1945 created escalating tensions between the USA and USSR, as Soviet expansion into Eastern Europe provoked Western alarm and a direct American policy of containment.',
@@ -406,7 +376,7 @@ opts:[
 'Soviet expansion into Eastern Europe after 1945 was primarily a defensive response to the threat of Western economic and military encirclement, but American policymakers like Truman and Acheson misinterpreted what was essentially a defensive buffer-state strategy as aggressive expansionism — creating avoidable tensions that escalated into a Cold War that diplomatic engagement could have prevented.'
 ],c:0,fb:'A topic sentence must: (1) address the question directly, (2) identify cause and effect, (3) preview your argument. Option A does all three. Option B is factual but doesn\'t address HOW communism caused tensions. Option C is a detail, not a thesis. Option D is so vague it could introduce any essay.'},
 
-{id:'q18',src:'para',num:'1.6b',m:2,lv:3,ll:'Synthesis',
+{id:'q18',src:'para',num:'1.6b',m:2,t:75,lv:3,ll:'Synthesis',
 t:'STEP 2 — SOURCE EVIDENCE: Which combination best supports your topic sentence?',
 opts:[
 'Churchill warned that an Iron Curtain divided Europe with cities from Warsaw to Sofia under Soviet control (Source 1A), and Acheson argued Soviet pressure on Greece and Turkey threatened the entire free world (Source 1C)',
@@ -415,7 +385,7 @@ opts:[
 'Stalin warned Eastern European countries against joining the Marshall Plan because he saw it as a direct challenge to his sphere of influence, forcing Czechoslovakia and Poland to withdraw despite their keen interest (Source 1D), while Acheson\'s description of the congressional debate as \'Armageddon\' reveals how the US administration framed even domestic budget decisions as apocalyptic struggles against communism (Source 1C)'
 ],c:0,fb:'Your evidence must DIRECTLY support the topic sentence. Option A combines Churchill\'s alarm at expansion with Acheson\'s existential warning — both proving that Soviet expansion caused Western panic. The other options contain accurate facts but don\'t directly demonstrate the cause-effect relationship your topic sentence claims.'},
 
-{id:'q19',src:'para',num:'1.6c',m:2,lv:3,ll:'Synthesis',
+{id:'q19',src:'para',num:'1.6c',m:2,t:75,lv:3,ll:'Synthesis',
 t:'STEP 3 — OWN KNOWLEDGE: Which extends the argument beyond the sources?',
 opts:[
 'The USA responded with the Truman Doctrine (1947) providing military aid to resist communism, and the Marshall Plan offering economic recovery — confirming that Soviet expansion directly triggered American counter-action, deepening the Cold War divide.',
@@ -424,7 +394,7 @@ opts:[
 'Churchill\'s Iron Curtain speech was deliberately delivered at an American university rather than in Britain, because he specifically wanted to convince the American public and Congress that Soviet expansion required an active American military and economic response — making the speech as much a strategic intervention in US domestic politics as an analysis of Soviet foreign policy in Eastern Europe.'
 ],c:0,fb:'Own knowledge must ADVANCE your argument. Option A shows the mechanism: Soviet expansion → American containment → deeper tensions. It proves the cause-effect chain your paragraph argues for. The other options are true but don\'t connect to the question.'},
 
-{id:'q20',src:'para',num:'1.6d',m:2,lv:3,ll:'Synthesis',
+{id:'q20',src:'para',num:'1.6d',m:2,t:75,lv:3,ll:'Synthesis',
 t:'STEP 4 — CONCLUSION: Which ties the paragraph together?',
 opts:[
 'Therefore, the spread of communism after 1945 directly caused Cold War tensions by creating a self-reinforcing cycle: Soviet expansion provoked Western containment, which deepened the ideological divide and entrenched two hostile blocs across Europe.',
@@ -499,6 +469,77 @@ function addSkillHint(){
     hintDiv.appendChild(btn);
   }
 }
+
+// ═══ TIMER ═══
+var qStartTime=0, totalStartTime=Date.now(), qTimerInterval=null, totalTimerInterval=null;
+var questionTimes={}; // track actual time per question
+
+function startQTimer(){
+  qStartTime=Date.now();
+  if(qTimerInterval)clearInterval(qTimerInterval);
+  qTimerInterval=setInterval(updateQTimer,1000);
+  updateQTimer();
+}
+
+function updateQTimer(){
+  const q=QS[curQ];if(!q)return;
+  const elapsed=Math.floor((Date.now()-qStartTime)/1000);
+  const recommended=q.t||60;
+  const remaining=recommended-elapsed;
+  const display=document.getElementById('q-timer');
+  if(!display)return;
+  
+  if(remaining>0){
+    const m=Math.floor(remaining/60);
+    const s=remaining%60;
+    display.textContent=m+':'+(s<10?'0':'')+s;
+    if(remaining>recommended*0.3){
+      display.className='timer-display timer-ok';
+    } else {
+      display.className='timer-display timer-warn';
+    }
+  } else {
+    const over=Math.abs(remaining);
+    const m=Math.floor(over/60);
+    const s=over%60;
+    display.textContent='+'+m+':'+(s<10?'0':'')+s;
+    display.className='timer-display timer-over';
+  }
+}
+
+function stopQTimer(){
+  if(qTimerInterval){clearInterval(qTimerInterval);qTimerInterval=null}
+  const q=QS[curQ];
+  if(q)questionTimes[q.id]=Math.floor((Date.now()-qStartTime)/1000);
+}
+
+function startTotalTimer(){
+  totalStartTime=Date.now();
+  totalTimerInterval=setInterval(updateTotalTimer,1000);
+}
+
+function updateTotalTimer(){
+  const elapsed=Math.floor((Date.now()-totalStartTime)/1000);
+  const m=Math.floor(elapsed/60);
+  const s=elapsed%60;
+  const display=document.getElementById('total-timer');
+  if(display)display.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+}
+
+function getTotalTime(){
+  const elapsed=Math.floor((Date.now()-totalStartTime)/1000);
+  const m=Math.floor(elapsed/60);
+  const s=elapsed%60;
+  return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+}
+
+
+function beginExam(){
+  document.getElementById('start-overlay').style.display='none';
+  startTotalTimer();
+  startQTimer();
+}
+
 function render(){
   const q=QS[curQ];
   const s=SRC[q.src];
@@ -514,6 +555,7 @@ function render(){
   document.getElementById('tb-fill').style.width=pct+'%';
 
   let html=`
+  
   <div class="source-panel">
     <div class="sp-header"><span class="sp-label">${s.label}</span><span class="sp-type">${s.type}</span></div>
     <button class="sp-toggle" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.textContent=this.textContent.includes('Show')?'▾ Hide source':'▾ Hide source to focus on the question'">▾ Hide source to focus on the question</button>
@@ -552,6 +594,7 @@ function tmm(i,mx){const q=QS[curQ];if(ans[q.id]?.done)return;ans[q.id]=ans[q.id
 const a=ans[q.id].sel,p=a.indexOf(i);if(p>-1)a.splice(p,1);else if(a.length<mx)a.push(i);render()}
 
 function submitQ(){
+  stopQTimer();
   const q=QS[curQ];if(ans[q.id]?.done)return;
   let ok;
   if(q.multi){const s=(ans[q.id].sel||[]).sort(),c=[...q.c].sort();ok=s.length===c.length&&s.every((v,i)=>v===c[i]);}
@@ -569,6 +612,7 @@ const p=Math.round(earM/totM*100);document.getElementById('tb-fill').style.width
 
 // ═══ MTA ═══
 function goMTA(){
+  stopQTimer();
   const s=SRC['mta'];
   let html=`<div class="source-panel">
     <div class="sp-header"><span class="sp-label">${s.label}</span><span class="sp-type">${s.type}</span></div>
@@ -627,6 +671,8 @@ function subMTA(ai){
 
 // ═══ RESULTS ═══
 function showResults(){
+  stopQTimer();
+  if(totalTimerInterval){clearInterval(totalTimerInterval);totalTimerInterval=null;}
   const p=Math.round(earM/totM*100);
   let g,gc,cm;
   if(p>=80){g='Level 7';gc='var(--ok)';cm='Outstanding. Thorough understanding of source analysis, interpretation, evaluation and synthesis.';}
@@ -675,7 +721,9 @@ function showResults(){
     \${p>=70?'<div style="margin-top:1.5rem;padding:1.2rem;background:linear-gradient(135deg,#1B4F72,#2E86C1);border-radius:6px;text-align:center"><div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.25em;color:#D4A745;font-weight:700;margin-bottom:.4rem">★ Bonus Section Unlocked</div><div style="color:#fff;font-size:.95rem;margin-bottom:.8rem">You scored '+p+'% — well done! You\'ve unlocked the <strong>Mark This Answer</strong> bonus section. Evaluate two paragraph answers to earn up to 12 bonus marks.</div><button class="bs" style="background:#D4A745;color:#1C2733" onclick="goMTA()">Start Bonus Section →</button></div>':'<div style="margin-top:1rem;padding:1rem;background:var(--frost);border:1px solid var(--bdr);border-radius:4px"><div style="font-size:.82rem;color:var(--txt2)"><strong>Bonus section locked.</strong> Score 70% or higher to unlock the Mark This Answer bonus section, where you can earn up to 12 extra marks by evaluating sample paragraph answers.</div></div>'}
     </div>
   </div>`;
-  document.querySelector('.top-bar').classList.add('hidden');
+  // Add time to results
+    var timeHtml=document.querySelector('.top-bar');
+    if(timeHtml)timeHtml.classList.add('hidden');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
