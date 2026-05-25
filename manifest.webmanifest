@@ -1,0 +1,25 @@
+{
+  "name": "Cold War Origins Exam",
+  "short_name": "CW Exam",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1C2733",
+  "background_color": "#F4F7FA",
+  "description": "Interactive Cold War Origins source examination based on DBE NSC History P1 May/June 2025.",
+  "icons": [
+    {
+      "src": "cartoon.png",
+      "sizes": "628x629",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "cartoon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
